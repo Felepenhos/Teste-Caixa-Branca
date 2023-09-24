@@ -20,6 +20,19 @@ seus metodos , variavéis , e alguns comentários .
 Sobre a sua Leegebilidade o código está bem formatado e segue a maneira da  formatação Java , o que facilita bastante . Sobre a sua organaziação 
 O código está bem organizado dentro do pacote login . 
 
+# 4 TODOS OS NULLPOINTERS FORAM TRATADOS?
+
+Sim todos os Nullpointers foram tratado dentro do codígo , porém podem fazer algumas melhorias para melhorar o tratamento de exceções.
+
+# 5 A ARQUITETURA UTILIZADA FOI DEVIDAMENTE RESPEITADA?
+Para aquilo que se pede a arquitetura foi devidamente respeitada . 
+
+# 6 AS CONEXÕES UTILIZADAS FORAM FECHADAS?
+
+Não tem tratamento explícito para fechar as conexões com o banco de dados. Isso pode resultar em vazamento de recursos e problemas de desempenho , é recomendando usar o  finally para garantir que as conexões sejam fechadas, independentemente de ocorrer uma exceção.
+
+
+
 
 
 
