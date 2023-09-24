@@ -7,13 +7,19 @@ fornece resultados que possibilitam uma análise diretamente relacionada ao cód
 
 ![teste1](https://github.com/Felepenhos/Teste-Caixa-Branca/assets/116446769/6ff5c272-dcc1-41f2-86ae-0a9db2cf64d8)
 
-# A DOCUMENTAÇÃO FOI DESCRITA NO CÓDIGO? 
-R: A Documentação não esta descrita da maneira corretamente dentro do Código . 
+# 1.A DOCUMENTAÇÃO FOI DESCRITA NO CÓDIGO? 
+A Documentação não esta descrita da maneira corretamente dentro do Código . 
 
-# AS VARIÁVEIS E CONSTANTES POSSUEM BOA NOMENCLATURA? 
+# 2. AS VARIÁVEIS E CONSTANTES POSSUEM BOA NOMENCLATURA? 
 
-R: O Codígo poderia estar melhor em suas nomenclaturas para facilitar a sua intrepetação , como melhorar o nome do pacote , das suas classes ,
+O Codígo poderia estar melhor em suas nomenclaturas para facilitar a sua intrepetação , como melhorar o nome do pacote , das suas classes ,
 seus metodos , variavéis , e alguns comentários . 
+
+# 3 EXISTEM LEGIBILIDADE E ORGANIZAÇÃO NO CÓDIGO?
+
+Sobre a sua Leegebilidade o código está bem formatado e segue a maneira da  formatação Java , o que facilita bastante . Sobre a sua organaziação 
+O código está bem organizado dentro do pacote login . 
+
 
 
 
