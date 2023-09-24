@@ -31,6 +31,24 @@ Para aquilo que se pede a arquitetura foi devidamente respeitada .
 
 Não tem tratamento explícito para fechar as conexões com o banco de dados. Isso pode resultar em vazamento de recursos e problemas de desempenho , é recomendando usar o  finally para garantir que as conexões sejam fechadas, independentemente de ocorrer uma exceção.
 
+# 7 ERROS DO CÓDIGO 
+1. Variavel ur1 não declarada
+2. Concatenação de Strings.
+3.  Injeção de SQL
+4.  Nomes de Classes e Métodos:
+5.  Falta de Fechamento de Conexão:
+
+# Tecnologia 
+Linguagem de Programação Java 
+
+# IDE 
+APACHE NETBEANS IDE 17
+
+# ULTIMA ATUALIZAÇÃO 24/09/2023
+
+
+
+
 
 
 
