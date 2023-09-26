@@ -17,7 +17,7 @@ seus metodos , variavéis , e alguns comentários .
 
 # 3 EXISTEM LEGIBILIDADE E ORGANIZAÇÃO NO CÓDIGO?
 
-Sobre a sua Leegebilidade o código está bem formatado e segue a maneira da  formatação Java , o que facilita bastante . Sobre a sua organaziação 
+Sobre a sua Legebilidade o código está bem formatado e segue a maneira da  formatação Java , o que facilita bastante . Sobre a sua organaziação 
 O código está bem organizado dentro do pacote login . 
 
 # 4 TODOS OS NULLPOINTERS FORAM TRATADOS?
