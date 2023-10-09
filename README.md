@@ -42,6 +42,17 @@ Não tem tratamento explícito para fechar as conexões com o banco de dados. Is
 
 ![1](https://github.com/Felepenhos/Teste-Caixa-Branca/assets/116446769/23438986-2565-42d1-b31c-47c52185b3e4)
 
+# Calculo 
+Nós = 14 
+Aretas =16
+16-14= 4 Caminhos Possivel 
+
+# Caminhos 
+1 = 1;2;3;4;5;6
+2 = 1;3;4;5;6;7;8;9;10;11;12;14
+3 = 1;3;4;5;6;7;8;9;10;11;12;14
+4 = 1;3;4;5;6;7;8;9;10;11;14
+
 # Tecnologia 
 Linguagem de Programação Java 
 
