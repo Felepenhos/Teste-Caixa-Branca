@@ -38,6 +38,10 @@ Não tem tratamento explícito para fechar as conexões com o banco de dados. Is
 4.  Nomes de Classes e Métodos:
 5.  Falta de Fechamento de Conexão:
 
+# GRAFO 
+
+![1](https://github.com/Felepenhos/Teste-Caixa-Branca/assets/116446769/23438986-2565-42d1-b31c-47c52185b3e4)
+
 # Tecnologia 
 Linguagem de Programação Java 
 
