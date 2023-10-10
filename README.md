@@ -44,7 +44,7 @@ Não tem tratamento explícito para fechar as conexões com o banco de dados. Is
 
 # Calculo 
 + Nós = 14
-+ Aretas =16
++ Arestas =16
 + 16-14= 4 Caminhos Possivel 
 
 # Caminhos 
