@@ -5,7 +5,7 @@ teste estrutural ou teste de caixa de vidro tem como foco testes que são aplica
 dos sistemas. Ao contrário do que ocorre nos testes de caixa-preta, a aplicação dos testes de caixa-branca
 fornece resultados que possibilitam uma análise diretamente relacionada ao código-fonte do sistema em
 
-![teste1](https://github.com/Felepenhos/Teste-Caixa-Branca/assets/116446769/6ff5c272-dcc1-41f2-86ae-0a9db2cf64d8)
+![Captura de tela 2023-10-09 215614](https://github.com/Felepenhos/Teste-Caixa-Branca/assets/116446769/bdebb4bc-8879-4980-bc58-6cb71e704c1f)
 
 # 1.A DOCUMENTAÇÃO FOI DESCRITA NO CÓDIGO? 
 A Documentação não esta descrita da maneira corretamente dentro do Código . 
