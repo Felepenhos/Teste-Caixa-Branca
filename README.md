@@ -1,64 +1,26 @@
-# Teste Caixa Branca Etapa 3
+# Teste Caixa Branca Etapa 2
 
 A técnica de caixa-branca atenta mais ao funcionamento interno do sistema. Também conhecido como
 teste estrutural ou teste de caixa de vidro tem como foco testes que são aplicados nas estruturas internas
 dos sistemas. Ao contrário do que ocorre nos testes de caixa-preta, a aplicação dos testes de caixa-branca
-fornece resultados que possibilitam uma análise diretamente relacionada ao código-fonte do sistema
-## Codigo Teste Caixa Branca 
-```
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+fornece resultados que possibilitam uma análise diretamente relacionada ao código-fonte do sistema em
 
-public class User {
-    /*  Método para estabelecer uma conexão com o banco de dados */
-    public Connection conectarBD(){ 
-        Connection conn = null;
-        
-        try{
-            /* <codigo-fonte> Carregando o driver do MySQL */
-            Class.forName("com.mysql.Driver.Manager").newInstance(); // NO 1
-            String url = "jdbc:mysql://127.0.0.1/test?user=lopes&password=123"; // NO 2
-            conn = DriverManager.getConnection(url); // NO 3
-        } catch (Exception e) { 
-            /* Tratamento com as exceções */
-        }  
-        return conn;
-    }
-    
-    /* Variáveis de instância */
-    public String nome = ""; 
-    public boolean result = false; 
+![Captura de tela 2023-10-09 215614](https://github.com/Felepenhos/Teste-Caixa-Branca/assets/116446769/bdebb4bc-8879-4980-bc58-6cb71e704c1f)
 
-    /* Verificar se o usuário existe no banco de dados */
-    public boolean verificarUsuario(String login, String senha){  
-        String sql = ""; 
-        Connection conn = conectarBD(); 
-        
-        /* INTRODUÇÃO SQL */
-        sql += "select nome from usuarios "; 
-        sql += "where login = " + "'" + login + "'"; 
-        sql += " and senha = " + "'" + senha + "';"; // NO 5
-        
-        try { 
-            Statement st =  conn.createStatement(); //NO 6
-            ResultSet rs = st.executeQuery(sql); // NO 7 
-            if(rs.next()){ // NO 8
-                result = true; //NO 9 
-                nome = rs.getString("nome"); // NO 10
-            } 
-        } catch (Exception e) {
-           
-        }
-        return result; // NO 11
-    } 
-}
-``` 
+ # GRAFO 
 
+![1](https://github.com/Felepenhos/Teste-Caixa-Branca/assets/116446769/23438986-2565-42d1-b31c-47c52185b3e4)
 
-# O que esta feito no codigo acima ? 
-No código apresentado, notamos uma abordagem de documentação que abrange classes, métodos e variáveis. Além disso, são identificadas as etapas críticas no fluxo do código marcando os seus Nó . 
+# Calculo 
++ Nós = 14
++ Arestas =16
++ 16-14= 4 Caminhos Possivel 
+
+# Caminhos 
++ 1 = 1;2;3;4;5;6;
++ 2 = 1;3;4;5;6;7;8;9;10;11;12;14;
++ 3 = 1;3;4;5;6;7;8;9;10;11;12;13;
++ 4 = 1;3;4;5;6;7;8;9;10;11;14;
 
 # Tecnologia 
 Linguagem de Programação Java 
@@ -66,9 +28,7 @@ Linguagem de Programação Java
 # IDE 
 APACHE NETBEANS IDE 17
 
-# ULTIMA ATUALIZAÇÃO 17/10/2023
-
-
+# ULTIMA ATUALIZAÇÃO 09/10/2023
 
 
 
