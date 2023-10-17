@@ -1,57 +1,64 @@
-# Teste-Caixa-Branca
+# Teste Caixa Branca Etapa 3
 
 A técnica de caixa-branca atenta mais ao funcionamento interno do sistema. Também conhecido como
 teste estrutural ou teste de caixa de vidro tem como foco testes que são aplicados nas estruturas internas
 dos sistemas. Ao contrário do que ocorre nos testes de caixa-preta, a aplicação dos testes de caixa-branca
-fornece resultados que possibilitam uma análise diretamente relacionada ao código-fonte do sistema em
+fornece resultados que possibilitam uma análise diretamente relacionada ao código-fonte do sistema
+## Codigo Teste Caixa Branca 
+```
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
-![Captura de tela 2023-10-09 215614](https://github.com/Felepenhos/Teste-Caixa-Branca/assets/116446769/bdebb4bc-8879-4980-bc58-6cb71e704c1f)
+public class User {
+    /*  Método para estabelecer uma conexão com o banco de dados */
+    public Connection conectarBD(){ 
+        Connection conn = null;
+        
+        try{
+            /* <codigo-fonte> Carregando o driver do MySQL */
+            Class.forName("com.mysql.Driver.Manager").newInstance(); // NO 1
+            String url = "jdbc:mysql://127.0.0.1/test?user=lopes&password=123"; // NO 2
+            conn = DriverManager.getConnection(url); // NO 3
+        } catch (Exception e) { 
+            /* Tratamento com as exceções */
+        }  
+        return conn;
+    }
+    
+    /* Variáveis de instância */
+    public String nome = ""; 
+    public boolean result = false; 
 
-# 1.A DOCUMENTAÇÃO FOI DESCRITA NO CÓDIGO? 
-A Documentação não esta descrita da maneira corretamente dentro do Código . 
+    /* Verificar se o usuário existe no banco de dados */
+    public boolean verificarUsuario(String login, String senha){  
+        String sql = ""; 
+        Connection conn = conectarBD(); 
+        
+        /* INTRODUÇÃO SQL */
+        sql += "select nome from usuarios "; 
+        sql += "where login = " + "'" + login + "'"; 
+        sql += " and senha = " + "'" + senha + "';"; // NO 5
+        
+        try { 
+            Statement st =  conn.createStatement(); //NO 6
+            ResultSet rs = st.executeQuery(sql); // NO 7 
+            if(rs.next()){ // NO 8
+                result = true; //NO 9 
+                nome = rs.getString("nome"); // NO 10
+            } 
+        } catch (Exception e) {
+           
+        }
+        return result; // NO 11
+    } 
+}
 
-# 2. AS VARIÁVEIS E CONSTANTES POSSUEM BOA NOMENCLATURA? 
 
-O Codígo poderia estar melhor em suas nomenclaturas para facilitar a sua intrepetação , como melhorar o nome do pacote , das suas classes ,
-seus metodos , variavéis , e alguns comentários . 
 
-# 3 EXISTEM LEGIBILIDADE E ORGANIZAÇÃO NO CÓDIGO?
-
-Sobre a sua Legebilidade o código está bem formatado e segue a maneira da  formatação Java , o que facilita bastante . Sobre a sua organaziação 
-O código está bem organizado dentro do pacote login . 
-
-# 4 TODOS OS NULLPOINTERS FORAM TRATADOS?
-
-Sim todos os Nullpointers foram tratado dentro do codígo , porém podem fazer algumas melhorias para melhorar o tratamento de exceções.
-
-# 5 A ARQUITETURA UTILIZADA FOI DEVIDAMENTE RESPEITADA?
-Para aquilo que se pede a arquitetura foi devidamente respeitada . 
-
-# 6 AS CONEXÕES UTILIZADAS FORAM FECHADAS?
-
-Não tem tratamento explícito para fechar as conexões com o banco de dados. Isso pode resultar em vazamento de recursos e problemas de desempenho , é recomendando usar o  finally para garantir que as conexões sejam fechadas, independentemente de ocorrer uma exceção.
-
-# 7 ERROS DO CÓDIGO 
-1. Variavel ur1 não declarada
-2. Concatenação de Strings.
-3.  Injeção de SQL
-4.  Nomes de Classes e Métodos:
-5.  Falta de Fechamento de Conexão:
-
-# GRAFO 
-
-![1](https://github.com/Felepenhos/Teste-Caixa-Branca/assets/116446769/23438986-2565-42d1-b31c-47c52185b3e4)
-
-# Calculo 
-+ Nós = 14
-+ Arestas =16
-+ 16-14= 4 Caminhos Possivel 
-
-# Caminhos 
-+ 1 = 1;2;3;4;5;6;
-+ 2 = 1;3;4;5;6;7;8;9;10;11;12;14;
-+ 3 = 1;3;4;5;6;7;8;9;10;11;12;13;
-+ 4 = 1;3;4;5;6;7;8;9;10;11;14;
+# O que esta feito no codigo acima ? 
+No código apresentado, notamos uma abordagem de documentação que abrange classes, métodos e variáveis. Além disso, são identificadas as etapas críticas no fluxo do código marcando os seus Nó . 
 
 # Tecnologia 
 Linguagem de Programação Java 
@@ -59,11 +66,7 @@ Linguagem de Programação Java
 # IDE 
 APACHE NETBEANS IDE 17
 
-# ULTIMA ATUALIZAÇÃO 09/10/2023
-
-
-
-
+# ULTIMA ATUALIZAÇÃO 17/10/2023
 
 
 
